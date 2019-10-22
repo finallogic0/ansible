@@ -1,0 +1,7 @@
+- name: display password
+  shell: cat /root/.jenkins/secrets/abhi
+  debug:
+  var: abhi.stdout
+  register: abhi
+  tags:
+    - tag_1

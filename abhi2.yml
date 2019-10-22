@@ -1,0 +1,10 @@
+---
+- hosts: [server]
+  gather_facts: true
+  become_user: root
+  connection: ssh
+  vars_files:
+    - subplay.yml
+  tasks:
+          - name: installing a package
+            apt: name='{{pkgname}}' state=present      

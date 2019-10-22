@@ -1,0 +1,11 @@
+---
+- hosts: [server]
+  gather_facts: true
+  become_user: root
+  connection: ssh
+  tasks:
+    - name: to create a file
+      file: dest=/opt/abh.txt state=touch
+
+
+

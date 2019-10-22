@@ -1,0 +1,12 @@
+---
+- hosts: [server]
+  gather_facts: true
+  become_user: root
+  connection: ssh
+  tasks:
+    - name: will create n files
+      file: dest=/root/abhi2/{{item}} state=touch
+      with_items:
+        - aa.txt
+        - bb.txt
+        - cc.txt      
